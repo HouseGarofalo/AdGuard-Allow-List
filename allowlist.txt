@@ -1,4 +1,9 @@
-! ==== Microsoft 365 (Teams / Outlook / OneNote / SharePoint / Auth) ====
+! ==== Microsoft 365 (Teams / Outlook / OneNote / SharePoint / Auth / Azure) ====
+@@||*.azure.com^
+@@||*.measure.office.net^
+@@||*.usercontent.microsoft^
+@@||*.cloud.microsoft.com^
+@@||*.events.data.microsoft.com^
 @@||teams.microsoft.com^
 @@||*.teams.microsoft.com^
 @@||graph.microsoft.com^
