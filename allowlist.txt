@@ -1,0 +1,36 @@
+! ==== Microsoft 365 (Teams / Outlook / OneNote / SharePoint / Auth) ====
+@@||teams.microsoft.com^
+@@||*.teams.microsoft.com^
+@@||graph.microsoft.com^
+@@||outlook.office.com^
+@@||outlook.office365.com^
+@@||*.sharepoint.com^
+@@||login.microsoftonline.com^
+@@||*.msedge.net^
+@@||*.onenote.com^
+@@||*.office.com^
+@@||*.live.com^
+! Telemetry (intentionally NOT whitelisted): teams.events.data.microsoft.com, mobile.events.data.microsoft.com, diagnostics.office.com
+
+! ==== Salesforce (core + platform + live agent) ====
+@@||login.salesforce.com^
+@@||*.salesforce.com^
+@@||*.force.com^
+@@||*.salesforceliveagent.com^
+
+! ==== Slack (app, API, CDN, images) ====
+@@||slack.com^
+@@||*.slack.com^
+@@||slack-edge.com^
+@@||slack-msgs.com^
+
+! ==== Chrome / Google dependencies commonly used by apps ====
+@@||accounts.google.com^
+@@||*.gstatic.com^
+@@||*.googleapis.com^
+@@||*.googleusercontent.com^
+
+! (Optional) If you ever use Zoom or Webex frequently, add:
+! @@||zoom.us^
+! @@||*.zoom.us^
+! @@||*.webex.com^
