@@ -1,20 +1,19 @@
 ! ==== Microsoft 365 (Teams / Outlook / OneNote / SharePoint / Auth / Azure) ====
-@@||*.azure.com^
-@@||*.measure.office.net^
+@@||*.azure.com^$important
+@@||*.office.net^$important
 @@||*.usercontent.microsoft^
-@@||*.cloud.microsoft.com^
-@@||*.events.data.microsoft.com^
-@@||teams.microsoft.com^
+@@||*.cloud.microsoft.com^$important
+@@||*.data.microsoft.com^$important
 @@||*.teams.microsoft.com^
-@@||graph.microsoft.com^
-@@||outlook.office.com^
-@@||outlook.office365.com^
-@@||*.sharepoint.com^
-@@||login.microsoftonline.com^
-@@||*.msedge.net^
-@@||*.onenote.com^
-@@||*.office.com^
-@@||*.live.com^
+@@||graph.microsoft.com^$important
+@@||outlook.office.com^$important
+@@||outlook.office365.com^$important
+@@||*.sharepoint.com^$important
+@@||login.microsoftonline.com^$important
+@@||*.msedge.net^$important
+@@||*.onenote.com^$important
+@@||*.office.com^$important
+@@||*.live.com^$important
 ! Telemetry (intentionally NOT whitelisted): teams.events.data.microsoft.com, mobile.events.data.microsoft.com, diagnostics.office.com
 
 ! ==== Other (core + platform + live agent + smart home ect) ====
