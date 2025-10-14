@@ -65,7 +65,7 @@ This repo provides a **curated list of allowed domains** so these apps work norm
 ---
 
 ## Changelog
-- **2025-08-19** → Initial commit (Microsoft 365, Salesforce, Slack, Chrome/Google core services).  
+- **2025-10-14** → Initial commit (Microsoft 365, Salesforce, Slack, Chrome/Google core services).  
 
 [Back to top](#adguard-allow-list)
 
