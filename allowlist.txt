@@ -17,6 +17,15 @@
 @@||*.live.com^
 ! Telemetry (intentionally NOT whitelisted): teams.events.data.microsoft.com, mobile.events.data.microsoft.com, diagnostics.office.com
 
+! ==== Other (core + platform + live agent + smart home ect) ====
+@@||*.websocket-a.intercom.io^
+@@||*.googleapis.com^
+@@||*.aria.microsoft.com^
+@@||*.measure.office.net^
+@@||*.ws.sonos.com^
+@@||*.adobe.io^
+@@||*.roku.com^
+
 ! ==== Salesforce (core + platform + live agent) ====
 @@||login.salesforce.com^
 @@||*.salesforce.com^
