@@ -24,6 +24,7 @@
 @@||*.ws.sonos.com^
 @@||*.adobe.io^
 @@||*.roku.com^
+@@||*.lgtvsdp.com^
 
 ! ==== Salesforce (core + platform + live agent) ====
 @@||login.salesforce.com^
