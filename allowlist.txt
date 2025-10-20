@@ -14,6 +14,7 @@
 @@||*.onenote.com^$important
 @@||*.office.com^$important
 @@||*.live.com^$important
+
 ! Telemetry (intentionally NOT whitelisted): teams.events.data.microsoft.com, mobile.events.data.microsoft.com, diagnostics.office.com
 
 ! ==== Other (core + platform + live agent + smart home ect) ====
@@ -25,6 +26,7 @@
 @@||*.adobe.io^
 @@||*.roku.com^
 @@||*.lgtvsdp.com^
+@@||*.ui.com^
 
 ! ==== Salesforce (core + platform + live agent) ====
 @@||login.salesforce.com^
