@@ -27,6 +27,7 @@
 @@||*.roku.com^
 @@||*.lgtvsdp.com^
 @@||*.ui.com^
+@@||*.visualstudio.com^
 
 ! ==== Salesforce (core + platform + live agent) ====
 @@||login.salesforce.com^
