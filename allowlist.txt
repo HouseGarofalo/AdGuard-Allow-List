@@ -40,6 +40,7 @@
 @@||*.github.com
 @@||*.iesnare.com
 @@||*.gcp.gvt2.com
+@@||curaleaf.com
 
 ! ==== Salesforce (core + platform + live agent) ====
 @@||login.salesforce.com^
