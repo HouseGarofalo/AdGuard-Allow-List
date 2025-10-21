@@ -33,7 +33,13 @@
 @@||*.amplitude.com^
 @@||*.vudu.com^
 @@||*.home-assistant.io^
-
+@@||*.prodregistryv2.org
+@@||*.us.sentry.io
+@@||*.affirm.com
+@@||*.adobe.com
+@@||*.github.com
+@@||*.iesnare.com
+@@||*.gcp.gvt2.com
 
 ! ==== Salesforce (core + platform + live agent) ====
 @@||login.salesforce.com^
