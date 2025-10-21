@@ -33,7 +33,7 @@
 @@||*.amplitude.com^
 @@||*.vudu.com^
 @@||*.home-assistant.io^
-@@||curaleaf.com^
+
 
 ! ==== Salesforce (core + platform + live agent) ====
 @@||login.salesforce.com^
