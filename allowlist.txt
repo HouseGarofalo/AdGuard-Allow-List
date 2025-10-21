@@ -41,6 +41,7 @@
 @@||*.iesnare.com
 @@||*.gcp.gvt2.com
 @@||curaleaf.com
+@@||featureassets.org
 
 ! ==== Salesforce (core + platform + live agent) ====
 @@||login.salesforce.com^
