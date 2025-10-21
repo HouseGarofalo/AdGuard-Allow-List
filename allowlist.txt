@@ -32,6 +32,7 @@
 @@||*.intercom.io^
 @@||*.amplitude.com^
 @@||*.vudu.com^
+@@||*.home-assistant.io^
 
 ! ==== Salesforce (core + platform + live agent) ====
 @@||login.salesforce.com^
