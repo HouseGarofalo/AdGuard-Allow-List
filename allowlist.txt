@@ -28,6 +28,9 @@
 @@||*.lgtvsdp.com^
 @@||*.ui.com^
 @@||*.visualstudio.com^
+@@||*.anthropic.com^
+@@||*.intercom.io^
+@@||*.amplitude.com^
 
 ! ==== Salesforce (core + platform + live agent) ====
 @@||login.salesforce.com^
