@@ -1,84 +1,84 @@
-! ==== Microsoft 365 (Teams / Outlook / OneNote / SharePoint / Auth / Azure) ====
-@@||*.azure.com^$important
-@@||*.office.net^$important
-@@||*.usercontent.microsoft^
-@@||*.cloud.microsoft.com^$important
-@@||*.data.microsoft.com^$important
-@@||*.teams.microsoft.com^
-@@||graph.microsoft.com^$important
-@@||outlook.office.com^$important
-@@||outlook.office365.com^$important
-@@||*.sharepoint.com^$important
-@@||login.microsoftonline.com^$important
-@@||*.msedge.net^$important
-@@||*.onenote.com^$important
-@@||*.office.com^$important
-@@||*.live.com^$important
-@@||*.security.microsoft.com^$important
+@@||*.windows.com^$important              ! Windows Update and services
+@@||*.windowsupdate.com^$important        ! Windows Update delivery
+@@||*.update.microsoft.com^$important     ! Update infrastructure
+@@||*.delivery.mp.microsoft.com^          ! Content delivery optimization
+@@||*.do.dsp.mp.microsoft.com^            ! Delivery Optimization
+@@||*.edge.skype.com^                     ! Teams media relay
+@@||*.teams.microsoft.com^$important      ! Already have but ensure subdomain coverage
+@@||*.sfx.ms^                             ! Microsoft short links and redirects
+@@||config.office.com^$important          ! Office configuration service
+@@||clientconfig.microsoftonline-p.net^   ! Client configuration
+```
 
-! Telemetry (intentionally NOT whitelisted): teams.events.data.microsoft.com, mobile.events.data.microsoft.com, diagnostics.office.com
+### **Certificate & Trust Services**
+```
+@@||ocsp.digicert.com^                    ! Certificate validation
+@@||ocsp.microsoft.com^                   ! Microsoft cert validation  
+@@||crl.microsoft.com^                    ! Certificate revocation
+@@||ctldl.windowsupdate.com^              ! Certificate Trust List updates
+```
 
-! ==== Other (core + platform + live agent + smart home ect) ====
-@@||*.websocket-a.intercom.io^
-@@||*.googleapis.com^
-@@||*.aria.microsoft.com^
-@@||*.measure.office.net^
-@@||*.ws.sonos.com^
-@@||*.adobe.io^
-@@||*.roku.com^
-@@||*.lgtvsdp.com^
-@@||*.ui.com^
-@@||*.visualstudio.com^
-@@||*.anthropic.com^
-@@||*.intercom.io^
-@@||*.amplitude.com^
-@@||*.vudu.com^
-@@||*.home-assistant.io^
-@@||*.honeycomb.io^
-@@||*.prodregistryv2.org
-@@||*.us.sentry.io^
-@@||*.affirm.com^
-@@||*.adobe.com^
-@@||*.github.com^
-@@||*.iesnare.com^
-@@||*.gcp.gvt2.com^
-@@||curaleaf.com^
-@@||featureassets.org^
-@@||.izatcloud.net^
-@@||.pndsn.com^
-@@||stun.l.google.com^
-@@||inference.location.live.net^
-@@||lrd.data.adobedc.net^
-@@||o324181.ingest.sentry.io^
-@@||s2s.mparticle.com^
-@@||enterprise.activity.windows.com^
-@@||browser.events.data.msn.com^
-@@||rpi-imager-stats.raspberrypi.com^
-@@||api.powerbi.com^
-@@||data.cline.bot^
-@@||telemetry.enterprise.githubcopilot.com^
-@@||data.cline.bot^
+### **DNS & Network Infrastructure**
+```
+@@||cloudflare-dns.com^                   ! Cloudflare DoH
+@@||dns.google^                           ! Google DNS
+@@||time.windows.com^                     ! Windows time sync
+@@||time.nist.gov^                        ! NIST time servers
+```
 
+### **Home Assistant Additions**
+```
+@@||*.hacs.xyz^                           ! HACS custom components
+@@||version.home-assistant.io^            ! Version checking
+@@||alerts.home-assistant.io^             ! Security alerts
+```
 
-! ==== Salesforce (core + platform + live agent) ====
-@@||login.salesforce.com^
-@@||*.salesforce.com^
-@@||*.force.com^
-@@||*.salesforceliveagent.com^
+### **GitHub & Development**
+```
+@@||*.github.io^                          ! GitHub Pages
+@@||raw.githubusercontent.com^           ! Raw content access
+@@||api.github.com^                       ! GitHub API
+@@||ghcr.io^                              ! GitHub Container Registry
+@@||objects.githubusercontent.com^        ! Git LFS objects
+```
 
-! ==== Slack (app, API, CDN, images) ====
-@@||slack.com^
-@@||*.slack.com^
-@@||slack-edge.com^
-@@||slack-msgs.com^
+### **Docker & Container Services** (for your Proxmox setup)
+```
+@@||registry-1.docker.io^                 ! Docker Hub
+@@||auth.docker.io^                       ! Docker authentication
+@@||production.cloudflare.docker.com^     ! Docker CDN
+@@||download.docker.com^                  ! Docker downloads
+```
 
-! ==== Chrome / Google dependencies commonly used by apps ====
-@@||accounts.google.com^
-@@||*.gstatic.com^
-@@||*.googleapis.com^
-@@||*.googleusercontent.com^
+### **Let's Encrypt / Certbot** (for your SSL certs)
+```
+@@||acme-v02.api.letsencrypt.org^        ! ACME v2 endpoint
+@@||acme-staging-v02.api.letsencrypt.org^ ! Staging endpoint
+```
 
-! (Optional) If you ever use Zoom or Webex frequently, add:
-! @@||zoom.us^
-! @@||*.zoom.us^
-! @@||*.webex.com^
+### **NTP Pools** (for your network devices)
+```
+@@||*.pool.ntp.org^                       ! NTP pool servers
+```
+
+## Recommended Additions for Your Environment
+
+Given your work at Microsoft and complex home network:
+```
+! ===========================
+! ✅ Proxmox & Virtualization
+! ===========================
+@@||download.proxmox.com^                 ! Proxmox updates
+@@||enterprise.proxmox.com^               ! Enterprise repo (if subscribed)
+
+! ===========================
+! ✅ Intel NIC Management (for your X540)
+! ===========================
+@@||downloadcenter.intel.com^             ! Driver downloads
+@@||www.intel.com^                        ! Support resources
+
+! ===========================
+! ✅ Canon Camera Support (for your R6)
+! ===========================
+@@||*.canon.com^                          ! Firmware and software updates
+@@||firmware.canon-europe.com^            ! EU firmware server
