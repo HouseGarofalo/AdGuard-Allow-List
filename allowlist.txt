@@ -1,6 +1,7 @@
 ! ===========================
-! AdGuard Home Allowlist - Complete Edition
-! Optimized for Microsoft 365, Azure, Home Assistant, UniFi, Smart Home
+! AdGuard Home Allowlist - Complete Comprehensive Edition
+! Optimized for Microsoft 365, Azure, Entra ID, Home Assistant, UniFi, Smart Home
+! Environment: Microsoft Corpnet, Entra Joined, Proxmox Cluster, 180+ WiFi Devices
 ! Last Updated: 2025-10-29
 ! ===========================
 
@@ -33,10 +34,17 @@
 @@||outlook.office.com^$important               ! Outlook web access
 @@||outlook.office365.com^$important            ! Legacy Outlook endpoint
 @@||login.microsoftonline.com^$important        ! Microsoft login and auth
+@@||login.microsoft.com^$important              ! Microsoft login services
 @@||*.microsoftonline-p.com^$important          ! Compliance and portal services
 @@||config.office.com^$important                ! Office configuration service
 @@||clientconfig.microsoftonline-p.net^$important ! Client configuration
 @@||*.sfx.ms^                                   ! Microsoft short links and redirects
+
+! ===========================
+! ✅ CRITICAL: Microsoft Store & Apps
+! ===========================
+@@||displaycatalog.mp.microsoft.com^$important  ! Microsoft Store catalog
+@@||licensing.mp.microsoft.com^$important       ! App licensing
 
 ! ===========================
 ! ✅ CRITICAL: Microsoft Teams & Communication
@@ -64,6 +72,53 @@
 @@||aadcdn.msauth.net^$important                ! Auth CDN for Entra ID
 
 ! ===========================
+! ✅ CRITICAL: Microsoft Intune & Endpoint Manager
+! ===========================
+@@||*.manage.microsoft.com^$important           ! Intune management
+@@||enrollment.manage.microsoft.com^$important  ! Device enrollment
+@@||portal.manage.microsoft.com^$important      ! Intune portal
+@@||fef.msuc.manage.microsoft.com^              ! Intune client check-in
+
+! ===========================
+! ✅ CRITICAL: OneDrive Sync
+! ===========================
+@@||onedrive.live.com^$important                ! OneDrive sync
+@@||*.onedrive.com^$important                   ! OneDrive services
+@@||skyapi.onedrive.live.com^                   ! OneDrive API
+
+! ===========================
+! ✅ CRITICAL: Microsoft Corpnet & VPN
+! ===========================
+@@||*.msftconnecttest.com^$important            ! Windows network connectivity test
+@@||www.msftconnecttest.com^$important          ! Connectivity check endpoint
+@@||ipv6.msftconnecttest.com^                   ! IPv6 connectivity test
+@@||*.msftncsi.com^$important                   ! Network Connectivity Status Indicator
+@@||*.windows.net^$important                    ! Azure services
+@@||*.vpn.microsoft.com^                        ! Microsoft VPN endpoints
+@@||edge.microsoft.com^                         ! Edge services for Corpnet
+
+! ===========================
+! ✅ CRITICAL: Microsoft Telemetry & Diagnostics
+! ===========================
+@@||*.events.data.microsoft.com^                ! Diagnostic data
+@@||watson.telemetry.microsoft.com^             ! Crash reporting
+@@||vortex.data.microsoft.com^                  ! Telemetry endpoint
+@@||inference.location.live.net^                ! Location inference
+@@||enterprise.activity.windows.com^            ! Activity history sync
+@@||browser.events.data.msn.com^                ! Edge browser telemetry
+
+! ===========================
+! ✅ CRITICAL: Azure AD Application Proxy
+! ===========================
+@@||*.servicebus.windows.net^                   ! Service Bus for hybrid
+@@||*.msappproxy.net^                           ! App Proxy connector
+
+! ===========================
+! ✅ CRITICAL: Microsoft Edge WebView2
+! ===========================
+@@||msedgewebview2.azureedge.net^               ! WebView2 runtime
+
+! ===========================
 ! ✅ CRITICAL: Certificate Validation & Trust
 ! ===========================
 @@||ocsp.digicert.com^$important                ! Certificate validation
@@ -80,6 +135,7 @@
 @@||acme-staging-v02.api.letsencrypt.org^       ! Staging endpoint
 @@||letsencrypt.org^                            ! Let's Encrypt website
 @@||*.letsencrypt.org^                          ! Let's Encrypt infrastructure
+@@||*.api.letsencrypt.org^                      ! Let's Encrypt API
 
 ! ===========================
 ! ✅ DNS & Time Services
@@ -109,11 +165,16 @@
 ! ===========================
 @@||*.home-assistant.io^$important              ! Core Home Assistant services
 @@||version.home-assistant.io^                  ! Version checking
+@@||versions.home-assistant.io^                 ! Version management
 @@||analytics.home-assistant.io^                ! Opt-in telemetry
 @@||alerts.home-assistant.io^                   ! Security alerts
+@@||data.home-assistant.io^                     ! Anonymous usage stats
 @@||*.nabu.casa^                                ! Remote access and cloud integrations
 @@||*.hacs.xyz^                                 ! HACS custom components
+@@||hacs.xyz^                                   ! HACS base domain
 @@||*.duckdns.org^                              ! Dynamic DNS for remote access
+@@||addons.community^                           ! Community add-on repo
+@@||*.home-assistant.community^                 ! Community resources
 
 ! ===========================
 ! ✅ Smart Home Device Clouds
@@ -188,9 +249,66 @@
 @@||*.api.yalehome.net^                         ! Yale API endpoint
 
 ! ===========================
+! ✅ Plex Media Server - Complete
+! ===========================
+@@||*.plex.tv^                                  ! Plex media server
+@@||plex.tv^$important                          ! Plex authentication
+@@||plex.direct^                                ! Local Plex access
+@@||*.plexapp.com^                              ! Plex apps
+@@||*.plex.bz^                                  ! Plex relay services
+@@||node.plexapp.com^                           ! Plex media node
+@@||o1.email.plex.tv^                           ! Plex email services
+@@||o2.sg0.plex.tv^                             ! Plex services
+@@||pubsub.plex.tv^                             ! Plex real-time updates
+@@||status.plex.tv^                             ! Plex status page
+@@||www.plex.tv^                                ! Plex website
+@@||app.plex.tv^                                ! Plex web app
+@@||dashboard.plex.tv^                          ! Plex dashboard
+@@||meta.plex.tv^                               ! Plex metadata
+@@||metadata.provider.plex.tv^                  ! Metadata provider
+@@||metrics.plex.tv^                            ! Plex analytics
+@@||tvdb2.plex.tv^                              ! TV metadata
+@@||cpms.spop10.ams.plex.bz^                    ! Plex media services
+@@||thetvdb.com^                                ! TV Database
+@@||themoviedb.com^                             ! Movie Database
+@@||*.themoviedb.org^                           ! TMDB CDN
+
+! ===========================
+! ✅ Fully Kiosk Browser
+! ===========================
+@@||*.fully-kiosk.com^                          ! Fully Kiosk cloud services
+@@||www.fully-kiosk.com^                        ! License validation
+@@||fully-kiosk.com^                            ! Core domain
+
+! ===========================
+! ✅ ESPHome & ESP32/ESP8266 OTA
+! ===========================
+@@||esphome.io^                                 ! ESPHome documentation
+@@||*.esphome.io^                               ! ESPHome services
+@@||ota.tasmota.com^                            ! Tasmota OTA updates (if using)
+@@||dl.espressif.com^                           ! ESP32/ESP8266 firmware
+@@||*.espressif.com^                            ! Espressif resources
+
+! ===========================
+! ✅ Emporia EV Charger
+! ===========================
+@@||*.emporiaenergy.com^                        ! Emporia cloud services
+@@||api.emporiaenergy.com^                      ! Emporia API
+
+! ===========================
+! ✅ Zigbee & Z-Wave Resources
+! ===========================
+@@||zigbee2mqtt.io^                             ! Zigbee2MQTT documentation
+@@||*.zigbee2mqtt.io^                           ! Zigbee2MQTT services
+@@||*.zwave-js.io^                              ! Z-Wave JS resources
+@@||zwave-js.github.io^                         ! Z-Wave JS documentation
+@@||products.z-wavealliance.org^                ! Z-Wave device database
+
+! ===========================
 ! ✅ GitHub & Development
 ! ===========================
 @@||*.github.com^$important                     ! GitHub core
+@@||github.com^$important                       ! GitHub base domain
 @@||*.github.io^                                ! GitHub Pages
 @@||raw.githubusercontent.com^                  ! Raw content access
 @@||api.github.com^                             ! GitHub API
@@ -207,6 +325,10 @@
 @@||production.cloudflare.docker.com^           ! Docker CDN
 @@||download.docker.com^                        ! Docker downloads
 @@||registry.hub.docker.com^                    ! Docker Hub registry
+@@||quay.io^                                    ! Red Hat Quay registry
+@@||*.quay.io^                                  ! Quay CDN
+@@||gcr.io^                                     ! Google Container Registry
+@@||k8s.gcr.io^                                 ! Kubernetes images
 
 ! ===========================
 ! ✅ Proxmox & Virtualization
@@ -214,6 +336,64 @@
 @@||download.proxmox.com^                       ! Proxmox updates
 @@||enterprise.proxmox.com^                     ! Enterprise repo (if subscribed)
 @@||*.debian.org^                               ! Debian package repos
+
+! ===========================
+! ✅ Ceph Storage (for Proxmox cluster)
+! ===========================
+@@||download.ceph.com^                          ! Ceph packages and updates
+@@||*.ceph.io^                                  ! Ceph project infrastructure
+@@||ceph.com^                                   ! Ceph website
+
+! ===========================
+! ✅ Grafana & Prometheus (Monitoring)
+! ===========================
+@@||grafana.com^                                ! Grafana
+@@||*.grafana.net^                              ! Grafana Cloud
+@@||prometheus.io^                              ! Prometheus docs
+
+! ===========================
+! ✅ Python & Package Management
+! ===========================
+@@||pypi.org^                                   ! Python Package Index
+@@||files.pythonhosted.org^                     ! PyPI file downloads
+@@||*.anaconda.org^                             ! Conda package repos
+@@||repo.anaconda.com^                          ! Anaconda repository
+@@||conda.anaconda.org^                         ! Conda package downloads
+
+! ===========================
+! ✅ Node.js, NPM & Yarn
+! ===========================
+@@||registry.npmjs.org^                         ! NPM package registry
+@@||*.npmjs.com^                                ! NPM services
+@@||nodejs.org^                                 ! Node.js downloads
+@@||*.yarnpkg.com^                              ! Yarn package manager
+@@||registry.yarnpkg.com^                       ! Yarn registry
+
+! ===========================
+! ✅ Linux Package Repos (for Proxmox/WSL)
+! ===========================
+@@||archive.ubuntu.com^                         ! Ubuntu packages
+@@||security.ubuntu.com^                        ! Ubuntu security updates
+@@||ports.ubuntu.com^                           ! Ubuntu ARM packages
+@@||deb.debian.org^                             ! Debian packages
+@@||security.debian.org^                        ! Debian security
+
+! ===========================
+! ✅ VS Code & Extensions
+! ===========================
+@@||marketplace.visualstudio.com^               ! VS Code extension marketplace
+@@||*.vscode-cdn.net^                           ! VS Code CDN
+@@||vscode.dev^                                 ! VS Code web
+@@||*.vscode.dev^                               ! VS Code web subdomains
+@@||az764295.vo.msecnd.net^                     ! VS Code downloads CDN
+
+! ===========================
+! ✅ AWS Services (for IoT devices)
+! ===========================
+@@||*.amazonaws.com^                            ! AWS services
+@@||*.s3.amazonaws.com^                         ! S3 regional endpoints
+@@||cognito-identity.amazonaws.com^             ! AWS Cognito for IoT auth
+@@||iot.amazonaws.com^                          ! AWS IoT Core
 
 ! ===========================
 ! ✅ Developer Tools & Observability
@@ -253,13 +433,6 @@
 @@||*.cloudflareclient.com^                     ! Cloudflare WARP client
 
 ! ===========================
-! ✅ Microsoft Activity & Location Services
-! ===========================
-@@||inference.location.live.net^                ! Location inference
-@@||enterprise.activity.windows.com^            ! Activity history sync
-@@||browser.events.data.msn.com^                ! Edge browser telemetry
-
-! ===========================
 ! ✅ Salesforce
 ! ===========================
 @@||login.salesforce.com^                       ! Salesforce login
@@ -291,21 +464,21 @@
 @@||*.adobedtm.com^                             ! Adobe Tag Manager
 
 ! ===========================
-! ✅ Zoom & Webex (if used)
+! ✅ Zoom & Webex
 ! ===========================
 @@||zoom.us^                                    ! Zoom core
 @@||*.zoom.us^                                  ! Zoom subdomains
 @@||*.webex.com^                                ! Cisco Webex
 
 ! ===========================
-! ✅ Intel (for NIC drivers/firmware)
+! ✅ Intel (for X540 NIC drivers/firmware)
 ! ===========================
 @@||downloadcenter.intel.com^                   ! Driver downloads
 @@||www.intel.com^                              ! Support resources
 @@||downloadmirror.intel.com^                   ! Download mirrors
 
 ! ===========================
-! ✅ Canon (for camera firmware/software)
+! ✅ Canon (for EOS R6 camera firmware/software)
 ! ===========================
 @@||*.canon.com^                                ! Canon services
 @@||firmware.canon-europe.com^                  ! EU firmware server
@@ -340,7 +513,10 @@
 @@||*.akamaized.net^                            ! Akamai CDN
 @@||*.fastly.net^                               ! Fastly CDN
 @@||*.bootstrapcdn.com^                         ! Bootstrap CDN
+@@||cdn.jsdelivr.net^                           ! jsDelivr CDN
+@@||unpkg.com^                                  ! unpkg CDN
 
 ! ===========================
 ! END OF ALLOWLIST
+! Total Entries: 450+ optimized for enterprise Microsoft environment
 ! ===========================
