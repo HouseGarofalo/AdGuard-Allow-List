@@ -14,6 +14,7 @@
 @@||*.delivery.mp.microsoft.com^$important      ! Content delivery optimization
 @@||*.do.dsp.mp.microsoft.com^                  ! Delivery Optimization
 @@||ctldl.windowsupdate.com^$important          ! Certificate Trust List updates
+@@||.ui.com^$important 
 
 ! ===========================
 ! ✅ CRITICAL: Microsoft 365 & Azure Platform
@@ -39,6 +40,8 @@
 @@||config.office.com^$important                ! Office configuration service
 @@||clientconfig.microsoftonline-p.net^$important ! Client configuration
 @@||*.sfx.ms^                                   ! Microsoft short links and redirects
+@@||*.clients.config.office.net^$important     
+@@||*.clients.config.office.net^$important
 
 ! ===========================
 ! ✅ CRITICAL: Microsoft Store & Apps
@@ -403,7 +406,7 @@
 @@||*.us.sentry.io^                             ! Sentry error tracking
 @@||o324181.ingest.sentry.io^                   ! Sentry ingest endpoint
 @@||data.cline.bot^                             ! Cline IDE agent telemetry
-@@||*.honeycomb.io^                             ! Observability and tracing
+@@||*.honeycomb.io^$important                   ! Observability and tracing
 @@||*.datadoghq.com^                            ! Datadog metrics and APM
 @@||*.newrelic.com^                             ! New Relic observability
 @@||*.loggly.com^                               ! Log aggregation
