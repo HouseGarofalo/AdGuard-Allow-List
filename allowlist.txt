@@ -36,14 +36,29 @@
 @@||*.home-assistant.io^
 @@||*.honeycomb.io^
 @@||*.prodregistryv2.org
-@@||*.us.sentry.io
-@@||*.affirm.com
-@@||*.adobe.com
-@@||*.github.com
-@@||*.iesnare.com
-@@||*.gcp.gvt2.com
-@@||curaleaf.com
-@@||featureassets.org
+@@||*.us.sentry.io^
+@@||*.affirm.com^
+@@||*.adobe.com^
+@@||*.github.com^
+@@||*.iesnare.com^
+@@||*.gcp.gvt2.com^
+@@||curaleaf.com^
+@@||featureassets.org^
+@@||.izatcloud.net^
+@@||.pndsn.com^
+@@||stun.l.google.com^
+@@||inference.location.live.net^
+@@||lrd.data.adobedc.net^
+@@||o324181.ingest.sentry.io^
+@@||s2s.mparticle.com^
+@@||enterprise.activity.windows.com^
+@@||browser.events.data.msn.com^
+@@||rpi-imager-stats.raspberrypi.com^
+@@||api.powerbi.com^
+@@||data.cline.bot^
+@@||telemetry.enterprise.githubcopilot.com^
+@@||data.cline.bot^
+
 
 ! ==== Salesforce (core + platform + live agent) ====
 @@||login.salesforce.com^
