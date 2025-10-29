@@ -14,6 +14,7 @@
 @@||*.onenote.com^$important
 @@||*.office.com^$important
 @@||*.live.com^$important
+@@||*.security.microsoft.com^$important
 
 ! Telemetry (intentionally NOT whitelisted): teams.events.data.microsoft.com, mobile.events.data.microsoft.com, diagnostics.office.com
 
@@ -33,6 +34,7 @@
 @@||*.amplitude.com^
 @@||*.vudu.com^
 @@||*.home-assistant.io^
+@@||*.honeycomb.io^
 @@||*.prodregistryv2.org
 @@||*.us.sentry.io
 @@||*.affirm.com
