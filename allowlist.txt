@@ -188,14 +188,17 @@
 @@||*.tuyaeu.com^                               ! Tuya EU region
 @@||*.tuyacn.com^                               ! Tuya CN region
 @@||*.iot.ozom.com^                             ! Zigbee/Z-Wave integrations
+@@||us.lgtvsdp.com^
+@@||apicache.vudu.com^
+@@||cdn.ometv.chat^
 
 ! ===========================
 ! ✅ Philips Hue
 ! ===========================
-@@||*.philips-hue.com^                          ! Hue app, bridge, and cloud services
-@@||*.meethue.com^                              ! Hue cloud and remote access
-@@||*.signify.com^                              ! Firmware updates and device provisioning
-@@||*.hue.sync^                                 ! Hue Sync Box control
+@@||*.philips-hue.com^$important                          ! Hue app, bridge, and cloud services
+@@||*.meethue.com^$important                              ! Hue cloud and remote access
+@@||*.signify.com^$important                              ! Firmware updates and device provisioning
+@@||*.hue.sync^$important                                 ! Hue Sync Box control
 
 ! ===========================
 ! ✅ Roku
