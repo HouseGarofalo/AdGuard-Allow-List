@@ -217,7 +217,8 @@
 @@||api2.amplitude.com^
 @@||diag.meethue.com^
 @@||api.honeycomb.io^
-@@||api.ipify.org^  
+@@||api.ipify.org^
+@@||https://graph.facebook.com^
 
 ! ===========================
 ! ✅ Philips Hue
