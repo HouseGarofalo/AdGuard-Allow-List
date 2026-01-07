@@ -42,7 +42,7 @@
 @@||*.sfx.ms^                                   ! Microsoft short links and redirects
 @@||*.clients.config.office.net^$important     
 @@||*.clients.config.office.net^$important
-
+@@||*.databricks.com^$important                  ! Databricks Endpoints
 ! ===========================
 ! ✅ CRITICAL: Microsoft Store & Apps
 ! ===========================
