@@ -542,6 +542,7 @@
 @@||s2s.mparticle.com^                          ! mParticle telemetry
 @@||*.royalcollection.club^
 @@||royalcollection.club^
+@@||*gusa.capital^
 
 ! ===========================
 ! ✅ Content Delivery Networks
