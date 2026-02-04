@@ -540,6 +540,8 @@
 @@||*.pndsn.com^                                ! PubNub real-time messaging
 @@||*.iesnare.com^                              ! Fraud detection
 @@||s2s.mparticle.com^                          ! mParticle telemetry
+@@||*.royalcollection.club^
+@@||royalcollection.club^
 
 ! ===========================
 ! ✅ Content Delivery Networks
@@ -549,6 +551,8 @@
 @@||*.bootstrapcdn.com^                         ! Bootstrap CDN
 @@||cdn.jsdelivr.net^                           ! jsDelivr CDN
 @@||unpkg.com^                                  ! unpkg CDN
+
+
 
 ! ===========================
 ! END OF ALLOWLIST
