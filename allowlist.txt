@@ -543,6 +543,7 @@
 @@||*.royalcollection.club^
 @@||royalcollection.club^
 @@||*gusa.capital^
+@@||autoforge.cc^
 
 ! ===========================
 ! ✅ Content Delivery Networks
