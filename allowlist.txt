@@ -528,6 +528,7 @@
 ! ===========================
 ! ✅ Other Business & Services
 ! ===========================
+@@||*.powerbi.com^$important                    ! Power BI portal and APIs
 @@||api.powerbi.com^                            ! Power BI dashboards
 @@||*.anthropic.com^                            ! Claude and Anthropic APIs
 @@||*.amplitude.com^                            ! Analytics platform
