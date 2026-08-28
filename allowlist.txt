@@ -2,7 +2,7 @@
 ! AdGuard Home Allowlist - Complete Comprehensive Edition
 ! Optimized for Microsoft 365, Azure, Entra ID, Home Assistant, UniFi, Smart Home
 ! Environment: Microsoft Corpnet, Entra Joined, Proxmox Cluster, 180+ WiFi Devices
-! Last Updated: 2025-10-29
+! Last Updated: 2026-08-28
 ! ===========================
 
 ! ===========================
@@ -350,6 +350,27 @@
 @@||objects.githubusercontent.com^              ! Git LFS objects
 @@||*.visualstudio.com^                         ! Azure DevOps and VS services
 @@||telemetry.enterprise.githubcopilot.com^     ! GitHub Copilot enterprise telemetry
+
+! ===========================
+! ✅ CI / Build Toolchain Downloads (.download TLD)
+! ===========================
+! The whole .download TLD is null-routed by the upstream blocklists — verified
+! 2026-08-28 by asking the resolver for a domain that does not exist:
+!
+!   temporal.download -> 0.0.0.0     (real, needed)
+!   nodejs.download   -> 0.0.0.0     (real, NodeSource)
+!   cdn.download      -> 0.0.0.0     (INVENTED — should be NXDOMAIN)
+!
+! That third line is the proof it is a wildcard TLD rule and not three separate
+! entries. Keep the TLD blocked and allow only what is actually needed; do NOT
+! add @@||*.download^ — the blocklists include that TLD for good reason.
+!
+! Symptom when this bites: the failure is a *download*, so it surfaces as a build
+! or CI error rather than a DNS one, and only when a cache is cold. It took out
+! self-hosted CI for HouseGarofalo/atlas-media with no code change — the runner
+! caches the binary by version, so it was invisible until that cache expired.
+@@||temporal.download^$important                ! Temporal test-server binary (temporalio SDK, CI)
+@@||nodejs.download^$important                  ! NodeSource Node.js distributions
 
 ! ===========================
 ! ✅ Docker & Container Registries
