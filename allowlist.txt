@@ -2,113 +2,182 @@
 ! AdGuard Home Allowlist - Complete Comprehensive Edition
 ! Optimized for Microsoft 365, Azure, Entra ID, Home Assistant, UniFi, Smart Home
 ! Environment: Microsoft Corpnet, Entra Joined, Proxmox Cluster, 180+ WiFi Devices
-! Last Updated: 2026-08-28
+! Last Updated: 2026-10-01
 ! ===========================
 
 ! ===========================
 ! ✅ CRITICAL: Windows Update & Core Services
 ! ===========================
-@@||*.windows.com^$important                    ! Windows Update and core services
-@@||*.windowsupdate.com^$important              ! Windows Update delivery
-@@||*.update.microsoft.com^$important           ! Update infrastructure
-@@||*.delivery.mp.microsoft.com^$important      ! Content delivery optimization
-@@||*.do.dsp.mp.microsoft.com^                  ! Delivery Optimization
-@@||ctldl.windowsupdate.com^$important          ! Certificate Trust List updates
-@@||.ui.com^$important 
+! Windows Update and core services
+@@||*.windows.com^$important
+! Windows Update delivery
+@@||*.windowsupdate.com^$important
+! Update infrastructure
+@@||*.update.microsoft.com^$important
+! Content delivery optimization
+@@||*.delivery.mp.microsoft.com^$important
+! Delivery Optimization
+@@||*.do.dsp.mp.microsoft.com^
+! Certificate Trust List updates
+@@||ctldl.windowsupdate.com^$important
+@@||ui.com^$important
 
 ! ===========================
 ! ✅ CRITICAL: Microsoft 365 & Azure Platform
 ! ===========================
-@@||*.microsoft.com^$important                  ! Catch-all for Microsoft domains
-@@||*.azure.com^$important                      ! Azure platform and APIs
-@@||*.office.net^$important                     ! Office 365 backend
-@@||*.office.com^$important                     ! Office 365 frontend
-@@||*.live.com^$important                       ! Microsoft account services
-@@||*.cloud.microsoft.com^$important            ! Microsoft cloud services
-@@||*.data.microsoft.com^$important             ! Microsoft data services
-@@||*.sharepoint.com^$important                 ! SharePoint Online
-@@||*.security.microsoft.com^$important         ! Microsoft Defender and security portal
-@@||*.onenote.com^$important                    ! OneNote sync and access
-@@||*.msedge.net^$important                     ! Edge browser services
-@@||*.usercontent.microsoft.com^$important      ! Office CDN and content
-@@||graph.microsoft.com^$important              ! Microsoft Graph API
-@@||outlook.office.com^$important               ! Outlook web access
-@@||outlook.office365.com^$important            ! Legacy Outlook endpoint
-@@||login.microsoftonline.com^$important        ! Microsoft login and auth
-@@||login.microsoft.com^$important              ! Microsoft login services
-@@||*.microsoftonline-p.com^$important          ! Compliance and portal services
-@@||config.office.com^$important                ! Office configuration service
-@@||clientconfig.microsoftonline-p.net^$important ! Client configuration
-@@||*.sfx.ms^                                   ! Microsoft short links and redirects
-@@||*.clients.config.office.net^$important     
+! Catch-all for Microsoft domains
+@@||*.microsoft.com^$important
+! Azure platform and APIs
+@@||*.azure.com^$important
+! Office 365 backend
+@@||*.office.net^$important
+! Office 365 frontend
+@@||*.office.com^$important
+! Microsoft account services
+@@||*.live.com^$important
+! Microsoft cloud services
+@@||*.cloud.microsoft.com^$important
+! Microsoft data services
+@@||*.data.microsoft.com^$important
+! SharePoint Online
+@@||*.sharepoint.com^$important
+! Microsoft Defender and security portal
+@@||*.security.microsoft.com^$important
+! OneNote sync and access
+@@||*.onenote.com^$important
+! Edge browser services
+@@||*.msedge.net^$important
+! Office CDN and content
+@@||*.usercontent.microsoft.com^$important
+! Microsoft Graph API
+@@||graph.microsoft.com^$important
+! Outlook web access
+@@||outlook.office.com^$important
+! Legacy Outlook endpoint
+@@||outlook.office365.com^$important
+! Microsoft login and auth
+@@||login.microsoftonline.com^$important
+! Microsoft login services
+@@||login.microsoft.com^$important
+! Compliance and portal services
+@@||*.microsoftonline-p.com^$important
+! Office configuration service
+@@||config.office.com^$important
+! Client configuration
+@@||clientconfig.microsoftonline-p.net^$important
+! Microsoft short links and redirects
+@@||*.sfx.ms^
 @@||*.clients.config.office.net^$important
-@@||*.databricks.com^$important                  ! Databricks Endpoints
+! Databricks Endpoints
+@@||*.databricks.com^$important
 ! ===========================
 ! ✅ CRITICAL: Microsoft Store & Apps
 ! ===========================
-@@||displaycatalog.mp.microsoft.com^$important  ! Microsoft Store catalog
-@@||licensing.mp.microsoft.com^$important       ! App licensing
+! Microsoft Store catalog
+@@||displaycatalog.mp.microsoft.com^$important
+! App licensing
+@@||licensing.mp.microsoft.com^$important
 
 ! ===========================
 ! ✅ CRITICAL: Microsoft Teams & Communication
 ! ===========================
-@@||*.teams.microsoft.com^$important            ! Microsoft Teams core
-@@||*.edge.skype.com^$important                 ! Teams media relay
-@@||skype.com^                                  ! Legacy federation and media services
-@@||lync.com^                                   ! SIP federation and legacy Teams services
-@@||broadcast.skype.com^                        ! Live events and media streaming
-@@||media.skype.com^                            ! Media relay and transport
-@@||config.teams.microsoft.com^                 ! Teams device provisioning
-@@||sipdir.online.lync.com^                     ! SIP directory for Teams/Skype federation
-@@||sfbassets.com^                              ! Skype for Business assets
+! Microsoft Teams core
+@@||*.teams.microsoft.com^$important
+! Teams media relay
+@@||*.edge.skype.com^$important
+! Legacy federation and media services
+@@||skype.com^
+! SIP federation and legacy Teams services
+@@||lync.com^
+! Live events and media streaming
+@@||broadcast.skype.com^
+! Media relay and transport
+@@||media.skype.com^
+! Teams device provisioning
+@@||config.teams.microsoft.com^
+! SIP directory for Teams/Skype federation
+@@||sipdir.online.lync.com^
+! Skype for Business assets
+@@||sfbassets.com^
 
 ! ===========================
 ! ✅ CRITICAL: Microsoft Entra ID & Device Identity
 ! ===========================
-@@||*.msauth.net^$important                     ! Microsoft authentication
-@@||*.msidentity.com^$important                 ! Identity platform
-@@||msftauth.net^$important                     ! Microsoft authentication
-@@||enterpriseregistration.microsoft.com^$important ! Device registration endpoint
-@@||device.login.microsoftonline.com^$important ! Device login and token issuance
-@@||autologon.microsoftazuread-sso.com^$important ! Seamless SSO for Entra ID
-@@||aadcdn.msftauth.net^$important              ! Entra ID content delivery
-@@||aadcdn.msauth.net^$important                ! Auth CDN for Entra ID
+! Microsoft authentication
+@@||*.msauth.net^$important
+! Identity platform
+@@||*.msidentity.com^$important
+! Microsoft authentication
+@@||msftauth.net^$important
+! Device registration endpoint
+@@||enterpriseregistration.microsoft.com^$important
+! Device login and token issuance
+@@||device.login.microsoftonline.com^$important
+! Seamless SSO for Entra ID
+@@||autologon.microsoftazuread-sso.com^$important
+! Entra ID content delivery
+@@||aadcdn.msftauth.net^$important
+! Auth CDN for Entra ID
+@@||aadcdn.msauth.net^$important
 
 ! ===========================
 ! ✅ CRITICAL: Microsoft Intune & Endpoint Manager
 ! ===========================
-@@||*.manage.microsoft.com^$important           ! Intune management
-@@||enrollment.manage.microsoft.com^$important  ! Device enrollment
-@@||portal.manage.microsoft.com^$important      ! Intune portal
-@@||fef.msuc.manage.microsoft.com^              ! Intune client check-in
+! Intune management
+@@||*.manage.microsoft.com^$important
+! Device enrollment
+@@||enrollment.manage.microsoft.com^$important
+! Intune portal
+@@||portal.manage.microsoft.com^$important
+! Intune client check-in
+@@||fef.msuc.manage.microsoft.com^
 
 ! ===========================
 ! ✅ CRITICAL: OneDrive Sync
 ! ===========================
-@@||onedrive.live.com^$important                ! OneDrive sync
-@@||*.onedrive.com^$important                   ! OneDrive services
-@@||skyapi.onedrive.live.com^                   ! OneDrive API
+! OneDrive sync
+@@||onedrive.live.com^$important
+! OneDrive services
+@@||*.onedrive.com^$important
+! OneDrive API
+@@||skyapi.onedrive.live.com^
 
 ! ===========================
 ! ✅ CRITICAL: Microsoft Corpnet & VPN
 ! ===========================
-@@||*.msftconnecttest.com^$important            ! Windows network connectivity test
-@@||www.msftconnecttest.com^$important          ! Connectivity check endpoint
-@@||ipv6.msftconnecttest.com^                   ! IPv6 connectivity test
-@@||*.msftncsi.com^$important                   ! Network Connectivity Status Indicator
-@@||*.windows.net^$important                    ! Azure services
-@@||*.vpn.microsoft.com^                        ! Microsoft VPN endpoints
-@@||edge.microsoft.com^                         ! Edge services for Corpnet
+! Windows network connectivity test
+@@||*.msftconnecttest.com^$important
+! Connectivity check endpoint
+@@||www.msftconnecttest.com^$important
+! IPv6 connectivity test
+@@||ipv6.msftconnecttest.com^
+! Network Connectivity Status Indicator
+@@||*.msftncsi.com^$important
+! Azure services
+@@||*.windows.net^$important
+! Microsoft VPN endpoints
+@@||*.vpn.microsoft.com^
+! Edge services for Corpnet
+@@||edge.microsoft.com^
+! Azure VPN Gateway endpoints (corp VPN), e.g. wan.<id>.vpn.azure.com
+! An allowed query name also skips CNAME checks, so the trafficmanager.net target needs no rule
+@@||vpn.azure.com^$important
 
 ! ===========================
 ! ✅ CRITICAL: Microsoft Telemetry & Diagnostics
 ! ===========================
-@@||*.events.data.microsoft.com^                ! Diagnostic data
-@@||watson.telemetry.microsoft.com^             ! Crash reporting
-@@||vortex.data.microsoft.com^                  ! Telemetry endpoint
-@@||inference.location.live.net^                ! Location inference
-@@||enterprise.activity.windows.com^            ! Activity history sync
-@@||browser.events.data.msn.com^                ! Edge browser telemetry
+! Diagnostic data
+@@||*.events.data.microsoft.com^
+! Crash reporting
+@@||watson.telemetry.microsoft.com^
+! Telemetry endpoint
+@@||vortex.data.microsoft.com^
+! Location inference
+@@||inference.location.live.net^
+! Activity history sync
+@@||enterprise.activity.windows.com^
+! Edge browser telemetry
+@@||browser.events.data.msn.com^
 @@||*.data.microsoft.com^
 @@||mobile.pipe.aria.microsoft.com^
 @@||mobile.events.data.microsoft.com^
@@ -119,8 +188,6 @@
 @@||unitedstates.smartscreen.microsoft.com^
 @@||browser.events.data.microsoft.com^
 @@||settings-win.data.microsoft.com^
-@@||vortex.data.microsoft.com^
-@@||enterprise.activity.windows.com^
 @@||dns.msftncsi.com^
 @@||eastus-8.in.applicationinsights.azure.com^
 @@||clients.config.office.net^
@@ -133,84 +200,130 @@
 ! ===========================
 ! ✅ CRITICAL: Azure AD Application Proxy
 ! ===========================
-@@||*.servicebus.windows.net^                   ! Service Bus for hybrid
-@@||*.msappproxy.net^                           ! App Proxy connector
+! Service Bus for hybrid
+@@||*.servicebus.windows.net^
+! App Proxy connector
+@@||*.msappproxy.net^
 
 ! ===========================
 ! ✅ CRITICAL: Microsoft Edge WebView2
 ! ===========================
-@@||msedgewebview2.azureedge.net^               ! WebView2 runtime
+! WebView2 runtime
+@@||msedgewebview2.azureedge.net^
 
 ! ===========================
 ! ✅ CRITICAL: Certificate Validation & Trust
 ! ===========================
-@@||ocsp.digicert.com^$important                ! Certificate validation
-@@||ocsp.microsoft.com^$important               ! Microsoft cert validation  
-@@||crl.microsoft.com^$important                ! Certificate revocation
-@@||ocsp.rootg2.amazontrust.com^                ! Amazon Root CA validation
-@@||ocsp.sectigo.com^                           ! Sectigo certificate validation
-@@||crl.identrust.com^                          ! IdenTrust CRL
+! Certificate validation
+@@||ocsp.digicert.com^$important
+! Microsoft cert validation
+@@||ocsp.microsoft.com^$important
+! Certificate revocation
+@@||crl.microsoft.com^$important
+! Amazon Root CA validation
+@@||ocsp.rootg2.amazontrust.com^
+! Sectigo certificate validation
+@@||ocsp.sectigo.com^
+! IdenTrust CRL
+@@||crl.identrust.com^
 
 ! ===========================
 ! ✅ CRITICAL: Let's Encrypt / ACME (for SSL certificates)
 ! ===========================
-@@||acme-v02.api.letsencrypt.org^$important     ! ACME v2 endpoint
-@@||acme-staging-v02.api.letsencrypt.org^       ! Staging endpoint
-@@||letsencrypt.org^                            ! Let's Encrypt website
-@@||*.letsencrypt.org^                          ! Let's Encrypt infrastructure
-@@||*.api.letsencrypt.org^                      ! Let's Encrypt API
+! ACME v2 endpoint
+@@||acme-v02.api.letsencrypt.org^$important
+! Staging endpoint
+@@||acme-staging-v02.api.letsencrypt.org^
+! Let's Encrypt website
+@@||letsencrypt.org^
+! Let's Encrypt infrastructure
+@@||*.letsencrypt.org^
+! Let's Encrypt API
+@@||*.api.letsencrypt.org^
 
 ! ===========================
 ! ✅ DNS & Time Services
 ! ===========================
-@@||cloudflare-dns.com^                         ! Cloudflare DoH
-@@||dns.google^                                 ! Google DNS
-@@||time.windows.com^                           ! Windows time sync
-@@||time.nist.gov^                              ! NIST time servers
-@@||*.pool.ntp.org^                             ! NTP pool servers
-@@||ntp.ui.com^                                 ! Time sync for UniFi devices
+! Cloudflare DoH
+@@||cloudflare-dns.com^
+! Google DNS
+@@||dns.google^
+! Windows time sync
+@@||time.windows.com^
+! NIST time servers
+@@||time.nist.gov^
+! NTP pool servers
+@@||*.pool.ntp.org^
+! Time sync for UniFi devices
+@@||ntp.ui.com^
 
 ! ===========================
 ! ✅ UniFi Network, Cameras, Phones, Access
 ! ===========================
-@@||unifi.ui.com^$important                     ! UniFi remote access and controller
-@@||fw-update.ubnt.com^                         ! Firmware updates
-@@||dl.ubnt.com^                                ! Downloads and updates
-@@||video.ubnt.com^                             ! UniFi Protect camera streams
-@@||protect.ui.com^                             ! UniFi Protect remote access
-@@||connect.ui.com^                             ! UniFi Connect (phones, signage)
-@@||access.ui.com^                              ! UniFi Access (door control)
-@@||trace.svc.ui.com^                           ! Ubiquiti telemetry
-@@||*.ubnt.com^                                 ! Ubiquiti catch-all
-@@||ping.ui.com^                                ! UniFi device ping test
-@@||trace.svc.ui.com^                           ! Ubiquiti telemetry
-@@||*.ubnt.com^                                 ! Ubiquiti catch-all
+! UniFi remote access and controller
+@@||unifi.ui.com^$important
+! Firmware updates
+@@||fw-update.ubnt.com^
+! Downloads and updates
+@@||dl.ubnt.com^
+! UniFi Protect camera streams
+@@||video.ubnt.com^
+! UniFi Protect remote access
+@@||protect.ui.com^
+! UniFi Connect (phones, signage)
+@@||connect.ui.com^
+! UniFi Access (door control)
+@@||access.ui.com^
+! Ubiquiti telemetry
+@@||trace.svc.ui.com^
+! Ubiquiti catch-all
+@@||*.ubnt.com^
+! UniFi device ping test
+@@||ping.ui.com^
 
 ! ===========================
 ! ✅ Home Assistant Core & Integrations
 ! ===========================
-@@||*.home-assistant.io^$important              ! Core Home Assistant services
-@@||version.home-assistant.io^                  ! Version checking
-@@||versions.home-assistant.io^                 ! Version management
-@@||analytics.home-assistant.io^                ! Opt-in telemetry
-@@||alerts.home-assistant.io^                   ! Security alerts
-@@||data.home-assistant.io^                     ! Anonymous usage stats
-@@||*.nabu.casa^                                ! Remote access and cloud integrations
-@@||*.hacs.xyz^                                 ! HACS custom components
-@@||hacs.xyz^                                   ! HACS base domain
-@@||*.duckdns.org^                              ! Dynamic DNS for remote access
-@@||addons.community^                           ! Community add-on repo
-@@||*.home-assistant.community^                 ! Community resources
+! Core Home Assistant services
+@@||*.home-assistant.io^$important
+! Version checking
+@@||version.home-assistant.io^
+! Version management
+@@||versions.home-assistant.io^
+! Opt-in telemetry
+@@||analytics.home-assistant.io^
+! Security alerts
+@@||alerts.home-assistant.io^
+! Anonymous usage stats
+@@||data.home-assistant.io^
+! Remote access and cloud integrations
+@@||*.nabu.casa^
+! HACS custom components
+@@||*.hacs.xyz^
+! HACS base domain
+@@||hacs.xyz^
+! Dynamic DNS for remote access
+@@||*.duckdns.org^
+! Community add-on repo
+@@||addons.community^
+! Community resources
+@@||*.home-assistant.community^
 
 ! ===========================
 ! ✅ Smart Home Device Clouds
 ! ===========================
-@@||*.tplinkcloud.com^                          ! TP-Link/Kasa smart devices
-@@||*.kasasmart.com^                            ! Kasa app and cloud services
-@@||*.tuyaus.com^                               ! Tuya-based smart devices
-@@||*.tuyaeu.com^                               ! Tuya EU region
-@@||*.tuyacn.com^                               ! Tuya CN region
-@@||*.iot.ozom.com^                             ! Zigbee/Z-Wave integrations
+! TP-Link/Kasa smart devices
+@@||*.tplinkcloud.com^
+! Kasa app and cloud services
+@@||*.kasasmart.com^
+! Tuya-based smart devices
+@@||*.tuyaus.com^
+! Tuya EU region
+@@||*.tuyaeu.com^
+! Tuya CN region
+@@||*.tuyacn.com^
+! Zigbee/Z-Wave integrations
+@@||*.iot.ozom.com^
 @@||us.lgtvsdp.com^
 @@||apicache.vudu.com^
 @@||cdn.ometv.chat^
@@ -218,138 +331,213 @@
 @@||diag.meethue.com^
 @@||api.honeycomb.io^
 @@||api.ipify.org^
-@@||https://graph.facebook.com^
+@@||graph.facebook.com^
 
 ! ===========================
 ! ✅ Philips Hue
 ! ===========================
-@@||*.philips-hue.com^$important                          ! Hue app, bridge, and cloud services
-@@||*.meethue.com^$important                              ! Hue cloud and remote access
-@@||*.signify.com^$important                              ! Firmware updates and device provisioning
-@@||*.hue.sync^$important                                 ! Hue Sync Box control
+! Hue app, bridge, and cloud services
+@@||*.philips-hue.com^$important
+! Hue cloud and remote access
+@@||*.meethue.com^$important
+! Firmware updates and device provisioning
+@@||*.signify.com^$important
+! Hue Sync Box control
+@@||*.hue.sync^$important
 
 ! ===========================
 ! ✅ Roku
 ! ===========================
-@@||*.roku.com^                                 ! Roku device services and updates
-@@||*.roku.direct^                              ! Local device discovery and control
-@@||*.roku.channel^                             ! Roku Channel streaming
+! Roku device services and updates
+@@||*.roku.com^
+! Local device discovery and control
+@@||*.roku.direct^
+! Roku Channel streaming
+@@||*.roku.channel^
 
 ! ===========================
 ! ✅ Apple HomeKit & Services
 ! ===========================
-@@||*.apple.com^                                ! Apple services and APIs
-@@||*.icloud.com^                               ! iCloud sync and HomeKit
-@@||mask-h2.icloud.com^                         ! iCloud Private Relay
-@@||metrics.icloud.com^                         ! iCloud diagnostics
-@@||*.mzstatic.com^                             ! Apple media assets
-@@||*.itunes.apple.com^                         ! App and media downloads
-@@||news.iadsdk.apple.com^                      ! Apple News ad delivery
+! Apple services and APIs
+@@||*.apple.com^
+! iCloud sync and HomeKit
+@@||*.icloud.com^
+! iCloud Private Relay
+@@||mask-h2.icloud.com^
+! iCloud diagnostics
+@@||metrics.icloud.com^
+! Apple media assets
+@@||*.mzstatic.com^
+! App and media downloads
+@@||*.itunes.apple.com^
+! Apple News ad delivery
+@@||news.iadsdk.apple.com^
 
 ! ===========================
 ! ✅ Samsung SmartThings
 ! ===========================
-@@||*.smartthings.com^                          ! SmartThings cloud and device control
-@@||*.samsungcloud.com^                         ! Samsung cloud sync
-@@||*.samsungiotcloud.com^                      ! IoT device communication
-@@||*.samsung.com^                              ! Samsung services and firmware
+! SmartThings cloud and device control
+@@||*.smartthings.com^
+! Samsung cloud sync
+@@||*.samsungcloud.com^
+! IoT device communication
+@@||*.samsungiotcloud.com^
+! Samsung services and firmware
+@@||*.samsung.com^
 
 ! ===========================
 ! ✅ Wyze
 ! ===========================
-@@||*.wyzecam.com^                              ! Wyze cloud and device control
-@@||*.wyze.com^                                 ! Wyze account and firmware updates
-@@||*.wyze-prod.com^                            ! Wyze media and telemetry
+! Wyze cloud and device control
+@@||*.wyzecam.com^
+! Wyze account and firmware updates
+@@||*.wyze.com^
+! Wyze media and telemetry
+@@||*.wyze-prod.com^
 
 ! ===========================
 ! ✅ Sonos
 ! ===========================
-@@||*.sonos.com^                                ! Sonos cloud and firmware
-@@||*.ws.sonos.com^                             ! Sonos websocket control
-@@||*.sonos.net^                                ! Sonos device discovery
+! Sonos cloud and firmware
+@@||*.sonos.com^
+! Sonos websocket control
+@@||*.ws.sonos.com^
+! Sonos device discovery
+@@||*.sonos.net^
 
 ! ===========================
 ! ✅ LG Smart TV
 ! ===========================
-@@||*.lgtvsdp.com^                              ! LG Smart TV services
-@@||*.lgsmartplatform.com^                      ! LG SmartHome OS and updates
-@@||*.lg.com^                                   ! LG cloud and support
+! LG Smart TV services
+@@||*.lgtvsdp.com^
+! LG SmartHome OS and updates
+@@||*.lgsmartplatform.com^
+! LG cloud and support
+@@||*.lg.com^
 
 ! ===========================
 ! ✅ August / Yale Smart Locks
 ! ===========================
-@@||*.august.com^                               ! August lock control and cloud
-@@||*.yalehome.com^                             ! Yale lock provisioning and updates
-@@||*.api.yalehome.net^                         ! Yale API endpoint
+! August lock control and cloud
+@@||*.august.com^
+! Yale lock provisioning and updates
+@@||*.yalehome.com^
+! Yale API endpoint
+@@||*.api.yalehome.net^
 
 ! ===========================
 ! ✅ Plex Media Server - Complete
 ! ===========================
-@@||*.plex.tv^                                  ! Plex media server
-@@||plex.tv^$important                          ! Plex authentication
-@@||plex.direct^                                ! Local Plex access
-@@||*.plexapp.com^                              ! Plex apps
-@@||*.plex.bz^                                  ! Plex relay services
-@@||node.plexapp.com^                           ! Plex media node
-@@||o1.email.plex.tv^                           ! Plex email services
-@@||o2.sg0.plex.tv^                             ! Plex services
-@@||pubsub.plex.tv^                             ! Plex real-time updates
-@@||status.plex.tv^                             ! Plex status page
-@@||www.plex.tv^                                ! Plex website
-@@||app.plex.tv^                                ! Plex web app
-@@||dashboard.plex.tv^                          ! Plex dashboard
-@@||meta.plex.tv^                               ! Plex metadata
-@@||metadata.provider.plex.tv^                  ! Metadata provider
-@@||metrics.plex.tv^                            ! Plex analytics
-@@||tvdb2.plex.tv^                              ! TV metadata
-@@||cpms.spop10.ams.plex.bz^                    ! Plex media services
-@@||thetvdb.com^                                ! TV Database
-@@||themoviedb.com^                             ! Movie Database
-@@||*.themoviedb.org^                           ! TMDB CDN
+! Plex media server
+@@||*.plex.tv^
+! Plex authentication
+@@||plex.tv^$important
+! Local Plex access
+@@||plex.direct^
+! Plex apps
+@@||*.plexapp.com^
+! Plex relay services
+@@||*.plex.bz^
+! Plex media node
+@@||node.plexapp.com^
+! Plex email services
+@@||o1.email.plex.tv^
+! Plex services
+@@||o2.sg0.plex.tv^
+! Plex real-time updates
+@@||pubsub.plex.tv^
+! Plex status page
+@@||status.plex.tv^
+! Plex website
+@@||www.plex.tv^
+! Plex web app
+@@||app.plex.tv^
+! Plex dashboard
+@@||dashboard.plex.tv^
+! Plex metadata
+@@||meta.plex.tv^
+! Metadata provider
+@@||metadata.provider.plex.tv^
+! Plex analytics
+@@||metrics.plex.tv^
+! TV metadata
+@@||tvdb2.plex.tv^
+! Plex media services
+@@||cpms.spop10.ams.plex.bz^
+! TV Database
+@@||thetvdb.com^
+! Movie Database
+@@||themoviedb.com^
+! TMDB CDN
+@@||*.themoviedb.org^
 
 ! ===========================
 ! ✅ Fully Kiosk Browser
 ! ===========================
-@@||*.fully-kiosk.com^                          ! Fully Kiosk cloud services
-@@||www.fully-kiosk.com^                        ! License validation
-@@||fully-kiosk.com^                            ! Core domain
+! Fully Kiosk cloud services
+@@||*.fully-kiosk.com^
+! License validation
+@@||www.fully-kiosk.com^
+! Core domain
+@@||fully-kiosk.com^
 
 ! ===========================
 ! ✅ ESPHome & ESP32/ESP8266 OTA
 ! ===========================
-@@||esphome.io^                                 ! ESPHome documentation
-@@||*.esphome.io^                               ! ESPHome services
-@@||ota.tasmota.com^                            ! Tasmota OTA updates (if using)
-@@||dl.espressif.com^                           ! ESP32/ESP8266 firmware
-@@||*.espressif.com^                            ! Espressif resources
+! ESPHome documentation
+@@||esphome.io^
+! ESPHome services
+@@||*.esphome.io^
+! Tasmota OTA updates (if using)
+@@||ota.tasmota.com^
+! ESP32/ESP8266 firmware
+@@||dl.espressif.com^
+! Espressif resources
+@@||*.espressif.com^
 
 ! ===========================
 ! ✅ Emporia EV Charger
 ! ===========================
-@@||*.emporiaenergy.com^                        ! Emporia cloud services
-@@||api.emporiaenergy.com^                      ! Emporia API
+! Emporia cloud services
+@@||*.emporiaenergy.com^
+! Emporia API
+@@||api.emporiaenergy.com^
 
 ! ===========================
 ! ✅ Zigbee & Z-Wave Resources
 ! ===========================
-@@||zigbee2mqtt.io^                             ! Zigbee2MQTT documentation
-@@||*.zigbee2mqtt.io^                           ! Zigbee2MQTT services
-@@||*.zwave-js.io^                              ! Z-Wave JS resources
-@@||zwave-js.github.io^                         ! Z-Wave JS documentation
-@@||products.z-wavealliance.org^                ! Z-Wave device database
+! Zigbee2MQTT documentation
+@@||zigbee2mqtt.io^
+! Zigbee2MQTT services
+@@||*.zigbee2mqtt.io^
+! Z-Wave JS resources
+@@||*.zwave-js.io^
+! Z-Wave JS documentation
+@@||zwave-js.github.io^
+! Z-Wave device database
+@@||products.z-wavealliance.org^
 
 ! ===========================
 ! ✅ GitHub & Development
 ! ===========================
-@@||*.github.com^$important                     ! GitHub core
-@@||github.com^$important                       ! GitHub base domain
-@@||*.github.io^                                ! GitHub Pages
-@@||raw.githubusercontent.com^                  ! Raw content access
-@@||api.github.com^                             ! GitHub API
-@@||ghcr.io^                                    ! GitHub Container Registry
-@@||objects.githubusercontent.com^              ! Git LFS objects
-@@||*.visualstudio.com^                         ! Azure DevOps and VS services
-@@||telemetry.enterprise.githubcopilot.com^     ! GitHub Copilot enterprise telemetry
+! GitHub core
+@@||*.github.com^$important
+! GitHub base domain
+@@||github.com^$important
+! GitHub Pages
+@@||*.github.io^
+! Raw content access
+@@||raw.githubusercontent.com^
+! GitHub API
+@@||api.github.com^
+! GitHub Container Registry
+@@||ghcr.io^
+! Git LFS objects
+@@||objects.githubusercontent.com^
+! Azure DevOps and VS services
+@@||*.visualstudio.com^
+! GitHub Copilot enterprise telemetry
+@@||telemetry.enterprise.githubcopilot.com^
 
 ! ===========================
 ! ✅ CI / Build Toolchain Downloads (.download TLD)
@@ -369,199 +557,304 @@
 ! or CI error rather than a DNS one, and only when a cache is cold. It took out
 ! self-hosted CI for HouseGarofalo/atlas-media with no code change — the runner
 ! caches the binary by version, so it was invisible until that cache expired.
-@@||temporal.download^$important                ! Temporal test-server binary (temporalio SDK, CI)
-@@||nodejs.download^$important                  ! NodeSource Node.js distributions
+! Temporal test-server binary (temporalio SDK, CI)
+@@||temporal.download^$important
+! NodeSource Node.js distributions
+@@||nodejs.download^$important
 
 ! ===========================
 ! ✅ Docker & Container Registries
 ! ===========================
-@@||registry-1.docker.io^                       ! Docker Hub
-@@||auth.docker.io^                             ! Docker authentication
-@@||production.cloudflare.docker.com^           ! Docker CDN
-@@||download.docker.com^                        ! Docker downloads
-@@||registry.hub.docker.com^                    ! Docker Hub registry
-@@||quay.io^                                    ! Red Hat Quay registry
-@@||*.quay.io^                                  ! Quay CDN
-@@||gcr.io^                                     ! Google Container Registry
-@@||k8s.gcr.io^                                 ! Kubernetes images
+! Docker Hub
+@@||registry-1.docker.io^
+! Docker authentication
+@@||auth.docker.io^
+! Docker CDN
+@@||production.cloudflare.docker.com^
+! Docker downloads
+@@||download.docker.com^
+! Docker Hub registry
+@@||registry.hub.docker.com^
+! Red Hat Quay registry
+@@||quay.io^
+! Quay CDN
+@@||*.quay.io^
+! Google Container Registry
+@@||gcr.io^
+! Kubernetes images
+@@||k8s.gcr.io^
 
 ! ===========================
 ! ✅ Proxmox & Virtualization
 ! ===========================
-@@||download.proxmox.com^                       ! Proxmox updates
-@@||enterprise.proxmox.com^                     ! Enterprise repo (if subscribed)
-@@||*.debian.org^                               ! Debian package repos
+! Proxmox updates
+@@||download.proxmox.com^
+! Enterprise repo (if subscribed)
+@@||enterprise.proxmox.com^
+! Debian package repos
+@@||*.debian.org^
 
 ! ===========================
 ! ✅ Ceph Storage (for Proxmox cluster)
 ! ===========================
-@@||download.ceph.com^                          ! Ceph packages and updates
-@@||*.ceph.io^                                  ! Ceph project infrastructure
-@@||ceph.com^                                   ! Ceph website
+! Ceph packages and updates
+@@||download.ceph.com^
+! Ceph project infrastructure
+@@||*.ceph.io^
+! Ceph website
+@@||ceph.com^
 
 ! ===========================
 ! ✅ Grafana & Prometheus (Monitoring)
 ! ===========================
-@@||grafana.com^                                ! Grafana
-@@||*.grafana.net^                              ! Grafana Cloud
-@@||prometheus.io^                              ! Prometheus docs
+! Grafana
+@@||grafana.com^
+! Grafana Cloud
+@@||*.grafana.net^
+! Prometheus docs
+@@||prometheus.io^
 
 ! ===========================
 ! ✅ Python & Package Management
 ! ===========================
-@@||pypi.org^                                   ! Python Package Index
-@@||files.pythonhosted.org^                     ! PyPI file downloads
-@@||*.anaconda.org^                             ! Conda package repos
-@@||repo.anaconda.com^                          ! Anaconda repository
-@@||conda.anaconda.org^                         ! Conda package downloads
+! Python Package Index
+@@||pypi.org^
+! PyPI file downloads
+@@||files.pythonhosted.org^
+! Conda package repos
+@@||*.anaconda.org^
+! Anaconda repository
+@@||repo.anaconda.com^
+! Conda package downloads
+@@||conda.anaconda.org^
 
 ! ===========================
 ! ✅ Node.js, NPM & Yarn
 ! ===========================
-@@||registry.npmjs.org^                         ! NPM package registry
-@@||*.npmjs.com^                                ! NPM services
-@@||nodejs.org^                                 ! Node.js downloads
-@@||*.yarnpkg.com^                              ! Yarn package manager
-@@||registry.yarnpkg.com^                       ! Yarn registry
+! NPM package registry
+@@||registry.npmjs.org^
+! NPM services
+@@||*.npmjs.com^
+! Node.js downloads
+@@||nodejs.org^
+! Yarn package manager
+@@||*.yarnpkg.com^
+! Yarn registry
+@@||registry.yarnpkg.com^
 
 ! ===========================
 ! ✅ Linux Package Repos (for Proxmox/WSL)
 ! ===========================
-@@||archive.ubuntu.com^                         ! Ubuntu packages
-@@||security.ubuntu.com^                        ! Ubuntu security updates
-@@||ports.ubuntu.com^                           ! Ubuntu ARM packages
-@@||deb.debian.org^                             ! Debian packages
-@@||security.debian.org^                        ! Debian security
+! Ubuntu packages
+@@||archive.ubuntu.com^
+! Ubuntu security updates
+@@||security.ubuntu.com^
+! Ubuntu ARM packages
+@@||ports.ubuntu.com^
+! Debian packages
+@@||deb.debian.org^
+! Debian security
+@@||security.debian.org^
 
 ! ===========================
 ! ✅ VS Code & Extensions
 ! ===========================
-@@||marketplace.visualstudio.com^               ! VS Code extension marketplace
-@@||*.vscode-cdn.net^                           ! VS Code CDN
-@@||vscode.dev^                                 ! VS Code web
-@@||*.vscode.dev^                               ! VS Code web subdomains
-@@||az764295.vo.msecnd.net^                     ! VS Code downloads CDN
+! VS Code extension marketplace
+@@||marketplace.visualstudio.com^
+! VS Code CDN
+@@||*.vscode-cdn.net^
+! VS Code web
+@@||vscode.dev^
+! VS Code web subdomains
+@@||*.vscode.dev^
+! VS Code downloads CDN
+@@||az764295.vo.msecnd.net^
 
 ! ===========================
 ! ✅ AWS Services (for IoT devices)
 ! ===========================
-@@||*.amazonaws.com^                            ! AWS services
-@@||*.s3.amazonaws.com^                         ! S3 regional endpoints
-@@||cognito-identity.amazonaws.com^             ! AWS Cognito for IoT auth
-@@||iot.amazonaws.com^                          ! AWS IoT Core
+! AWS services
+@@||*.amazonaws.com^
+! S3 regional endpoints
+@@||*.s3.amazonaws.com^
+! AWS Cognito for IoT auth
+@@||cognito-identity.amazonaws.com^
+! AWS IoT Core
+@@||iot.amazonaws.com^
 
 ! ===========================
 ! ✅ Developer Tools & Observability
 ! ===========================
-@@||sessions.bugsnag.com^                       ! Bugsnag crash reporting
-@@||notify.bugsnag.com^                         ! Bugsnag notifications
-@@||*.us.sentry.io^                             ! Sentry error tracking
-@@||o324181.ingest.sentry.io^                   ! Sentry ingest endpoint
-@@||data.cline.bot^                             ! Cline IDE agent telemetry
-@@||*.honeycomb.io^$important                   ! Observability and tracing
-@@||*.datadoghq.com^                            ! Datadog metrics and APM
-@@||*.newrelic.com^                             ! New Relic observability
-@@||*.loggly.com^                               ! Log aggregation
+! Bugsnag crash reporting
+@@||sessions.bugsnag.com^
+! Bugsnag notifications
+@@||notify.bugsnag.com^
+! Sentry error tracking
+@@||*.us.sentry.io^
+! Sentry ingest endpoint
+@@||o324181.ingest.sentry.io^
+! Cline IDE agent telemetry
+@@||data.cline.bot^
+! Observability and tracing
+@@||*.honeycomb.io^$important
+! Datadog metrics and APM
+@@||*.datadoghq.com^
+! New Relic observability
+@@||*.newrelic.com^
+! Log aggregation
+@@||*.loggly.com^
 
 ! ===========================
 ! ✅ Ad SDK Telemetry (if needed for dev)
 ! ===========================
-@@||sdkapi.dsp-api.moloco.com^                  ! Moloco ad SDK telemetry
-@@||api.bidmachine.io^                          ! BidMachine SDK telemetry
-@@||configure-tcp-ios.mtgglobals.com^           ! Mintegral ad SDK config
+! Moloco ad SDK telemetry
+@@||sdkapi.dsp-api.moloco.com^
+! BidMachine SDK telemetry
+@@||api.bidmachine.io^
+! Mintegral ad SDK config
+@@||configure-tcp-ios.mtgglobals.com^
 
 ! ===========================
 ! ✅ Google Cloud & APIs
 ! ===========================
-@@||*.googleapis.com^                           ! Google APIs
-@@||*.gstatic.com^                              ! Google static content
-@@||*.googleusercontent.com^                    ! Google CDN
-@@||accounts.google.com^                        ! Google account login
-@@||stun.l.google.com^                          ! WebRTC STUN server
-@@||*.gcp.gvt2.com^                             ! Google Cloud Platform assets
+! Google APIs
+@@||*.googleapis.com^
+! Google static content
+@@||*.gstatic.com^
+! Google CDN
+@@||*.googleusercontent.com^
+! Google account login
+@@||accounts.google.com^
+! WebRTC STUN server
+@@||stun.l.google.com^
+! Google Cloud Platform assets
+@@||*.gcp.gvt2.com^
 
 ! ===========================
 ! ✅ Cloudflare
 ! ===========================
-@@||*.cloudflare.com^                           ! CDN and DNS services
-@@||*.cloudflare.net^                           ! Cloudflare infrastructure
-@@||*.cloudflareclient.com^                     ! Cloudflare WARP client
+! CDN and DNS services
+@@||*.cloudflare.com^
+! Cloudflare infrastructure
+@@||*.cloudflare.net^
+! Cloudflare WARP client
+@@||*.cloudflareclient.com^
 
 ! ===========================
 ! ✅ Salesforce
 ! ===========================
-@@||login.salesforce.com^                       ! Salesforce login
-@@||*.salesforce.com^                           ! Salesforce core
-@@||*.force.com^                                ! Salesforce platform
-@@||*.salesforceliveagent.com^                  ! Live agent chat
+! Salesforce login
+@@||login.salesforce.com^
+! Salesforce core
+@@||*.salesforce.com^
+! Salesforce platform
+@@||*.force.com^
+! Live agent chat
+@@||*.salesforceliveagent.com^
 
 ! ===========================
 ! ✅ Slack
 ! ===========================
-@@||slack.com^                                  ! Slack core
-@@||*.slack.com^                                ! Slack subdomains
-@@||slack-edge.com^                             ! Slack CDN
-@@||slack-msgs.com^                             ! Slack messaging
+! Slack core
+@@||slack.com^
+! Slack subdomains
+@@||*.slack.com^
+! Slack CDN
+@@||slack-edge.com^
+! Slack messaging
+@@||slack-msgs.com^
 
 ! ===========================
 ! ✅ Intercom & Live Agent
 ! ===========================
-@@||*.websocket-a.intercom.io^                  ! Intercom live chat
-@@||*.intercom.io^                              ! Intercom services
-@@||nexus-websocket-a.intercom.io^              ! Intercom websocket
+! Intercom live chat
+@@||*.websocket-a.intercom.io^
+! Intercom services
+@@||*.intercom.io^
+! Intercom websocket
+@@||nexus-websocket-a.intercom.io^
 
 ! ===========================
 ! ✅ Adobe Creative Cloud
 ! ===========================
-@@||*.adobe.com^                                ! Adobe core
-@@||*.adobe.io^                                 ! Adobe APIs
-@@||lrd.data.adobedc.net^                       ! Adobe Experience telemetry
-@@||*.adobedtm.com^                             ! Adobe Tag Manager
+! Adobe core
+@@||*.adobe.com^
+! Adobe APIs
+@@||*.adobe.io^
+! Adobe Experience telemetry
+@@||lrd.data.adobedc.net^
+! Adobe Tag Manager
+@@||*.adobedtm.com^
 
 ! ===========================
 ! ✅ Zoom & Webex
 ! ===========================
-@@||zoom.us^                                    ! Zoom core
-@@||*.zoom.us^                                  ! Zoom subdomains
-@@||*.webex.com^                                ! Cisco Webex
+! Zoom core
+@@||zoom.us^
+! Zoom subdomains
+@@||*.zoom.us^
+! Cisco Webex
+@@||*.webex.com^
 
 ! ===========================
 ! ✅ Intel (for X540 NIC drivers/firmware)
 ! ===========================
-@@||downloadcenter.intel.com^                   ! Driver downloads
-@@||www.intel.com^                              ! Support resources
-@@||downloadmirror.intel.com^                   ! Download mirrors
+! Driver downloads
+@@||downloadcenter.intel.com^
+! Support resources
+@@||www.intel.com^
+! Download mirrors
+@@||downloadmirror.intel.com^
 
 ! ===========================
 ! ✅ Canon (for EOS R6 camera firmware/software)
 ! ===========================
-@@||*.canon.com^                                ! Canon services
-@@||firmware.canon-europe.com^                  ! EU firmware server
-@@||*.canon-asia.com^                           ! Asia firmware server
+! Canon services
+@@||*.canon.com^
+! EU firmware server
+@@||firmware.canon-europe.com^
+! Asia firmware server
+@@||*.canon-asia.com^
 
 ! ===========================
 ! ✅ Raspberry Pi
 ! ===========================
-@@||rpi-imager-stats.raspberrypi.com^           ! Raspberry Pi Imager stats
-@@||*.raspberrypi.org^                          ! Raspberry Pi foundation
-@@||*.raspberrypi.com^                          ! Raspberry Pi products
+! Raspberry Pi Imager stats
+@@||rpi-imager-stats.raspberrypi.com^
+! Raspberry Pi foundation
+@@||*.raspberrypi.org^
+! Raspberry Pi products
+@@||*.raspberrypi.com^
 
 ! ===========================
 ! ✅ Other Business & Services
 ! ===========================
-@@||*.powerbi.com^$important                    ! Power BI portal and APIs
-@@||api.powerbi.com^                            ! Power BI dashboards
-@@||*.anthropic.com^                            ! Claude and Anthropic APIs
-@@||*.amplitude.com^                            ! Analytics platform
-@@||affirm.com^                                 ! Affirm payment services
-@@||curaleaf.com^                               ! Curaleaf site access
-@@||featureassets.org^                          ! Asset hosting
-@@||*.vudu.com^                                 ! Vudu streaming
-@@||*.prodregistryv2.org^                       ! Registry services
-@@||*.izatcloud.net^                            ! Location services
-@@||*.pndsn.com^                                ! PubNub real-time messaging
-@@||*.iesnare.com^                              ! Fraud detection
-@@||s2s.mparticle.com^                          ! mParticle telemetry
+! Power BI portal and APIs
+@@||*.powerbi.com^$important
+! Power BI dashboards
+@@||api.powerbi.com^
+! Claude and Anthropic APIs
+@@||*.anthropic.com^
+! Analytics platform
+@@||*.amplitude.com^
+! Affirm payment services
+@@||affirm.com^
+! Curaleaf site access
+@@||curaleaf.com^
+! Asset hosting
+@@||featureassets.org^
+! Vudu streaming
+@@||*.vudu.com^
+! Registry services
+@@||*.prodregistryv2.org^
+! Location services
+@@||*.izatcloud.net^
+! PubNub real-time messaging
+@@||*.pndsn.com^
+! Fraud detection
+@@||*.iesnare.com^
+! mParticle telemetry
+@@||s2s.mparticle.com^
 @@||*.royalcollection.club^
 @@||royalcollection.club^
 @@||*gusa.capital^
@@ -571,11 +864,16 @@
 ! ===========================
 ! ✅ Content Delivery Networks
 ! ===========================
-@@||*.akamaized.net^                            ! Akamai CDN
-@@||*.fastly.net^                               ! Fastly CDN
-@@||*.bootstrapcdn.com^                         ! Bootstrap CDN
-@@||cdn.jsdelivr.net^                           ! jsDelivr CDN
-@@||unpkg.com^                                  ! unpkg CDN
+! Akamai CDN
+@@||*.akamaized.net^
+! Fastly CDN
+@@||*.fastly.net^
+! Bootstrap CDN
+@@||*.bootstrapcdn.com^
+! jsDelivr CDN
+@@||cdn.jsdelivr.net^
+! unpkg CDN
+@@||unpkg.com^
 
 
 

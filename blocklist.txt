@@ -1,0 +1,13 @@
+! ===========================
+! AdGuard Home Blocklist - Household Custom Blocks
+! Subscribe as a DNS BLOCKLIST (Filters -> DNS blocklists), NOT as an allowlist.
+! Rules in an allowlist subscription are always treated as allow rules.
+! Comments must be on their own line - AdGuard drops rules with trailing "! ..." text.
+! Last Updated: 2026-10-01
+! ===========================
+
+! ===========================
+! Dead / defunct device clouds (chatty devices retrying servers that no longer answer)
+! ===========================
+! Sengled cloud - upstream returns SERVFAIL, so bulbs retry nonstop; answer locally instead
+||us-life2.cloud.sengled.com^

@@ -38,6 +38,7 @@ This repo provides a **curated list of allowed domains** so these apps work norm
 
 ## Repository Contents
 - `allowlist.txt` → main list of domains to be whitelisted in AdGuard  
+- `blocklist.txt` → small custom blocklist (e.g. dead device clouds that devices hammer)  
 - (optional) `README.md` → this documentation  
 - (optional) `changelog.md` → track when/why new domains are added  
 
@@ -50,6 +51,7 @@ This repo provides a **curated list of allowed domains** so these apps work norm
 2. In AdGuard Home → **Filters → Allowlists** → **Add allowlist**.  
 3. Enter a name (e.g., “Work Tools”) and paste the raw GitHub URL.  
 4. **Save** and click **Check for updates** (or restart AdGuard Home).  
+5. Add the raw URL to `blocklist.txt` under **Filters → DNS blocklists** (not Allowlists — every rule in an allowlist subscription is treated as an allow rule, including `||domain^` block rules).  
 
 [Back to top](#adguard-allow-list)
 
@@ -58,6 +60,7 @@ This repo provides a **curated list of allowed domains** so these apps work norm
 ## Notes
 - This allowlist is intentionally minimal — only domains required for core functionality are included.  
 - If an app breaks, check AdGuard’s **Query Log** → add the blocked domain → commit back to this repo.  
+- **Comments go on their own line.** AdGuard only treats `!` / `#` as a comment at the start of a line; a rule with trailing text like `@@||example.com^$important ! note` is silently discarded.  
 - PRs or suggestions welcome if you see improvements.  
 
 [Back to top](#adguard-allow-list)
@@ -66,6 +69,7 @@ This repo provides a **curated list of allowed domains** so these apps work norm
 
 ## Changelog
 - **2025-10-14** → Initial commit (Microsoft 365, Salesforce, Slack, Chrome/Google core services).  
+- **2026-10-01** → Moved trailing comments onto their own lines — only 38 of 338 rules were actually in effect, the rest were discarded by AdGuard. Removed duplicate rules, fixed `||.ui.com` and `||https://graph.facebook.com`, allowed `vpn.azure.com` (corp VPN), added `blocklist.txt` with the defunct Sengled cloud.  
 
 [Back to top](#adguard-allow-list)
 
